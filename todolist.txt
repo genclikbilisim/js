@@ -1,1 +1,12 @@
 Yapýlacaklar Listesi
+1. Veritabaný dizayn edilecek : Ahmet
+2. Veritabaný oluþturulacak : Gökhan, Harun
+
+FrontEnd Tasarým
+Arayuz tasarýmý: Gizem
+CSS: Handan
+
+BackEnd Programlama
+1. php kodu yazýmý: Kubilay
+2. Ajax eklemeler : Emine
+
