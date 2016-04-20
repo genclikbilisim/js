@@ -2,10 +2,16 @@
 <head>
 <title> Baþlýk </title>
 <script language="javascript">
-
+function degistir(){
+document.getElementById("demo").innerHTML = "Bu yazý JS tarafýndan deðiþtirilmiþtir!";
+document.getElementById("demo").style.fontSize = "10px";
+}
 </script>
 </head>
 <body>
+<h2 id="demo">Burasý Javascript'in demo alaný </h2>
+
+<button type="button" onclick="degistir()" > Týkla! </button>
 
 </body>
 </html>
