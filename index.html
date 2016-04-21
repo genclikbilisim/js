@@ -6,6 +6,11 @@ function degerlendir(){
 var x;
 x=document.getElementById("sayi").value;
 document.getElementById("demo").innerHTML="Girilen sayý"+x+"'dir.";
+if(x == "" || isNaN(x) || x>10 || x<0) {
+document.getElementById("demo").innerHTML="Girilen sayý geçersizdir!!!.";
+}else{
+document.getElementById("demo").innerHTML="Girilen sayý geçerlidir.";
+}
 }
 </script>
 </head>
