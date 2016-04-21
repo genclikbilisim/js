@@ -3,14 +3,16 @@
 <title> Baþlýk </title>
 <script language="javascript">
 function degerlendir(){
-var x;
+var x,mesaj;
 x=document.getElementById("sayi").value;
-document.getElementById("demo").innerHTML="Girilen sayý"+x+"'dir.";
-if(x == "" || isNaN(x) || x>10 || x<0) {
-document.getElementById("demo").innerHTML="Girilen sayý geçersizdir!!!.";
+mesaj="Girilen sayý"+x+"'dir.";
+if(x == ""
+ || isNaN(x) || x>10 || x<0) {
+mesaj= "Girilen sayý geçersizdir.";
 }else{
-document.getElementById("demo").innerHTML="Girilen sayý geçerlidir.";
+mesaj= "Girilen sayý geçerlidir.";
 }
+document.getElementById("demo").innerHTML=mesaj;
 }
 </script>
 </head>
