@@ -1,6 +1,8 @@
 <html>
 <head>
 <title> Baþlýk </title>
+<link rel="stylesheet" href="stil.css" type="html/css">
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <script language="javascript">
 function degerlendir(){
 var x,mesaj;
@@ -14,12 +16,18 @@ mesaj= "Girilen sayý geçerlidir.";
 }
 document.getElementById("demo").innerHTML=mesaj;
 }
+
+function imzaat(){
+document.getElementById("imza").innerHTML="Aslý Yazaðan";
+}
 </script>
 </head>
 <body>
 1 -10 arasýnda bir sayý giriniz:
 <input id="sayi"> </input>
 <button type="button" onclick="degerlendir()"> Týkla! </button>
-<p id="demo">  </p>
+<button type="button" onclick="imzaat()"> Ýmzala! </button>
+<p id="demo"> .......................... </p>
+<p id="imza"> .......................... </p>
 </body>
 </html>
