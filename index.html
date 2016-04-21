@@ -2,12 +2,17 @@
 <head>
 <title> Baþlýk </title>
 <script language="javascript">
-
+function degerlendir(){
+var x;
+x=document.getElementById("sayi").value;
+document.getElementById("demo").innerHTML="Girilen sayý"+x+"'dir.";
+}
 </script>
 </head>
 <body>
+1 -10 arasýnda bir sayý giriniz:
 <input id="sayi"> </input>
-<button type="button" onclick=""> Týkla! </button>
+<button type="button" onclick="degerlendir()"> Týkla! </button>
 <p id="demo">  </p>
 </body>
 </html>
