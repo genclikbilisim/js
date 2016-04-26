@@ -1,13 +1,22 @@
 <html>
 <head>
 <title> Baþlýk </title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Sofia" />
 <script language="javascript">
-
+function Hesapla(f){
+return (5/9) * (f-32);
+}
+function Cevir(){
+var s=document.getElementById("sicaklik").value;
+document.getElementById("demo").innerHTML = Hesapla(s);
+}
 </script>
 </head>
 <body>
-<input id="sayi"> </input>
-<button type="button" onclick=""> Týkla! </button>
-<p id="demo">  </p>
+
+<p>Fahrenayt olarak sýcaklýk deðeri giriniz: <input id="sicaklik"> </p>
+<button type="button" onclick="Cevir()"> Cevir </button>
+Derece olarak sýcaklýk : <p id="demo">  </p>
+
 </body>
 </html>
