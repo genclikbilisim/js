@@ -1,11 +1,23 @@
 <html>
 <head>
 <title> Baþlýk </title>
-<script language="javascript">
+<script>
+function yukle(){
+var kisi = {
+ad : "Asli",
+soyad : "Yazagan",
+yas:"45",
+cinsiyet:"kadýn"
+};
 
+var metin= kisi.ad+" "+kisi.soyad+" "+kisi.yas+" yaþýnda bir "+kisi.cinsiyet+"'dýr.";
+
+document.getElementById("demo").innerHTML = metin;
+}
 </script>
 </head>
-<body>
+<body onload="yukle();">
+<p id="demo"></p>
 
 </body>
 </html>
