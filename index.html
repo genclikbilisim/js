@@ -2,10 +2,24 @@
 <head>
 <title> Baþlýk </title>
 <script language="javascript">
+function degistir(){
+document.getElementById("resim").src="img/atmaca.jpg";
+}
+function pdegistir(){
+var y = document.getElementsByTagName("p");
+y.innerHTML="YASASIIINNNNNN!! DERS BÝTÝYOO!";
+}
 
 </script>
 </head>
-<body>
+<body onload="pdegistir();">
 
+<img id="resim" src="img/atmaca2.jpg" onclick="degistir();">
+<button type="button" onclick="pdegistir();"> PAragraflarý Degistir </button>
+<p> Paragraf 1</p>
+<p> Paragraf 2</p>
+<p> Paragraf 3</p>
+<p> Paragraf 4</p>
+<p> Paragraf 5</p>
 </body>
 </html>
