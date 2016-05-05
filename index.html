@@ -4,20 +4,20 @@
 <style>
 </style>
 <script language="javascript">
-function listeyeEkle() {
+function listeyeEkle(e) {
+if (e.keyCode == 13) {
 var txtEklenen = document.getElementById("txt").value;
     var listeElementi = document.createElement("LI");
     var metinElementi = document.createTextNode(txtEklenen);
     listeElementi.appendChild(metinElementi);
 document.getElementById("listem").appendChild(listeElementi);
-
+}
 }
 </script>
 </head>
 <body>
-<input id="txt"/>
-<button type="button" onclick="listeyeEkle();">Listeye Eklemek için Týklayýnýz.</button>
-<ul id="listem">
+<input id="txt" onkeypress="return listeyeEkle(event);"/>
+<ul id="listem" >
   <li>Kahve</li>
   <li>Çay</li>
 </ul>
