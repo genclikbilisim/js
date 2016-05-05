@@ -1,25 +1,29 @@
 <html>
 <head>
 <title> Baþlýk </title>
+<style>
+</style>
 <script language="javascript">
-function degistir(){
-document.getElementById("resim").src="img/atmaca.jpg";
-}
-function pdegistir(){
-var y = document.getElementsByTagName("p");
-y.innerHTML="YASASIIINNNNNN!! DERS BÝTÝYOO!";
-}
+function listeyeEkle() {
+var txtEklenen = document.getElementById("txt").value;
+    var listeElementi = document.createElement("LI");
+    var metinElementi = document.createTextNode(txtEklenen);
+    listeElementi.appendChild(metinElementi);
+document.getElementById("listem").appendChild(listeElementi);
 
+}
 </script>
 </head>
-<body onload="pdegistir();">
-
-<img id="resim" src="img/atmaca2.jpg" onclick="degistir();">
-<button type="button" onclick="pdegistir();"> PAragraflarý Degistir </button>
-<p> Paragraf 1</p>
-<p> Paragraf 2</p>
-<p> Paragraf 3</p>
-<p> Paragraf 4</p>
-<p> Paragraf 5</p>
+<body>
+<input id="txt"/>
+<button type="button" onclick="listeyeEkle();">Listeye Eklemek için Týklayýnýz.</button>
+<ul id="listem">
+  <li>Kahve</li>
+  <li>Çay</li>
+</ul>
 </body>
 </html>
+
+
+
+
