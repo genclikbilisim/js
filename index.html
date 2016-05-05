@@ -1,11 +1,57 @@
 <html>
 <head>
 <title> Baþlýk </title>
+<style>
+.kutu{
+height:100px;
+width:100px;
+border:5px solid black;
+float:left;
+margin:20px;
+}
+</style>
 <script language="javascript">
-
+function surukleBaslat(event) {
+    event.dataTransfer.setData("Text", event.target.id);
+	// dataTransfer.setData() metodu sürüklenen elementin veritipini 
+	//ve sürüklenen deðeri tutar.
+	//yani: Text tipinde, "Sürükle Beni!" deðerini içeren elementi tutar.
+}
+function surukle(event) {
+    document.getElementById("demo").innerHTML = " Element sürükleniyor!";
+	// Sürükleme baþlayýnca ekrana bir mesaj yazdýrýr 
+}
+function birak(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("Text");
+    event.target.appendChild(document.getElementById(data));
+	// dataTransfer.getData() metodu sürüklenen elementi getirir.
+	//bu elemen bir paragraftýr. Ýçindeki metine de innerHTML ile ulaþýlabilir.
+    document.getElementById("demo").innerHTML = document.getElementById(data).innerHTML+" elementi birakýldý";
+	// Sürükleme birince ekrana bir mesaj yazdýrýr
+}
+function surukleBitir(event) {
+    event.preventDefault();
+	// Normalde Elementler baþka bir elemente taþýnamaz. 
+	//Taþýmaya izin vermek için, varsayýlaný engellemek gerekir.
+}
 </script>
 </head>
 <body>
+<div class="kutu" ondrop="birak(event)" ondragover="surukleBitir(event)">
+<p ondragstart="surukleBaslat(event)" ondrag="surukle(event)" 
+   draggable="true" id="suruklenenNesne">Aslý!</p>
+</div>
+<div class="kutu" ondrop="birak(event)" ondragover="surukleBitir(event)">  
+<p ondragstart="surukleBaslat(event)" ondrag="surukle(event)" 
+   draggable="true" id="suruklenenNesne2">Kerem</p>
+</div>
+<p id="demo"></p>
 
 </body>
 </html>
+
+
+
+
+
